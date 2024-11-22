@@ -1,0 +1,18 @@
+name: Selenium tests for CI/CD
+on: [push, workflow_dispatch]
+env:
+  USERNAME: ${{ secrets.USERNAME }} 
+  PASSWORD: ${{ secrets.PASSWORD }} 
+  
+jobs:     
+ playwright-run:
+    runs-on: ubuntu-latest
+    steps:
+         - name: Checkout
+           uses: actions/checkout@v3
+
+         - name: Npm Updates
+           run: npm install  
+
+         - name: Selenium tests
+           run: npm run test

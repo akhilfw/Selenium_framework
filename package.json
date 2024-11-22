@@ -1,0 +1,22 @@
+{
+    "name": "selenium_framework",
+    "version": "1.0.0",
+    "description": "Selenium with Cucumber",
+    "scripts": {
+      "test": "cucumber-js"
+    },
+    "keywords": [
+      "Selenium",
+      "BDD",
+      "Cucumber"
+    ],
+    "license": "ISC",
+    "dependencies": {
+        "chromedriver": "latest",
+        "selenium-webdriver": "latest"
+      },
+    "devDependencies": {
+      "@cucumber/cucumber": "9.6.0"
+    }
+  }
+  
