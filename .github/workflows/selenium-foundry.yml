@@ -5,11 +5,16 @@ env:
   PASSWORD: ${{ secrets.PASSWORD }} 
   
 jobs:     
- playwright-run:
+ selenium-run:
     runs-on: ubuntu-latest
     steps:
          - name: Checkout
            uses: actions/checkout@v3
+
+         - uses: browser-actions/setup-chrome@v1
+           with:
+             chrome-version: 120
+             install-chromedriver: true
 
          - name: Npm Updates
            run: npm install  
